@@ -1,7 +1,7 @@
 ![Fun image](/images/ethereum-rainbow.jpg)
 
 # What is this?
-This repository which contains my blog post drafts. If you found this, you 
+This repository contains my blog post drafts. If you found this, you
 might get to see some raw and unedited posts. Please don't judge me too much 
 if I sound crazy 😅
 
