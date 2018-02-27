@@ -11,3 +11,5 @@ open could be cool. We will see!
 > Thank you for living. Thank you for loving. Thank you for being you.
 > 
 > 🌕 Peace 
+
+#### [Read on GitBook](https://karlfloersch.gitbooks.io/posts/content/)
