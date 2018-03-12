@@ -18,7 +18,7 @@ Let's take a look at a payoff matrix in this case. There are two agents in our g
 
 The matrix might look something like this:
 
-![](/content/images/2018/03/Screen-Shot-2018-03-08-at-12.14.25-AM.png)
+![](https://karl.tech/content/images/2018/03/Screen-Shot-2018-03-08-at-12.14.25-AM.png)
 
 Here `social_cost` refers to the operator's reputation and any legal actions taken against them, and `user_utility` refers to how much value a user gets out of being able to transact with high throughput. If the operator is well known and lives in a jurisdiction with a good legal system, this cost could be extremely large. However, it is clear that you'd never trust an anonymous internet troll to be your operator.
 
@@ -28,7 +28,7 @@ Social cost alone can get us a long way, but there are some serious limitations.
 
 In our previous model, users had no in-protocol recourse if the payment operator were to go rogue. Plasma exits were designed to solve this problem exactly. A Plasma exit is a mechanism by which users are able to reclaim their funds \(eg. ETH\) on the mainchain even if the central operator tries to steal their money. That means if users pay attention, they will always have the upper-hand over a Plasma operator and keep their tokens safe. You can learn exactly how this can be implemented in this [Plasma MVP Overview video](https://www.youtube.com/watch?v=jTc_2tyT_lY).
 
-![](/content/images/2018/03/Screen-Shot-2018-03-08-at-12.14.33-AM.png)
+![](https://karl.tech/content/images/2018/03/Screen-Shot-2018-03-08-at-12.14.33-AM.png)
 
 With the ability for users to exit, the payoff matrix is wildly different. If users exit the chain in response to a Plasma operator misbehaving, the Plasma operator suffers a huge negative utility. The only conceivable reasons for misbehaving now are either a hack against the operator \(incentive to hurt the operator\) or the operator wanting to impose the `exit_cost` on its users, but still at the likely asymmetric cost of `all_future_fees` and `social_cost`. This is a huge step forward in the power balance between user and operator.
 
@@ -42,7 +42,7 @@ Once again we can address this problem by imposing additional constraints on the
 
 We can now adjust our model to take this change into consideration.
 
-![](/content/images/2018/03/Screen-Shot-2018-03-08-at-12.14.39-AM.png)
+![](https://karl.tech/content/images/2018/03/Screen-Shot-2018-03-08-at-12.14.39-AM.png)
 
 This is especially exciting. The only way for a user to lose their money is now the `{Attempt to steal a user's money, Passively Observe}` box. However, this outcome is easy to avoid and therefore extremely unlikely because any user is able to challenge an invalid exit, and there is a reward for catching invalid exits. All that is left is the new "withhold finalized block" which basically means the operator can decide to shut the chain down by publishing an unavailable block. However, the only effect on users is an interruption in service--no risk of funds being stolen.
 
